@@ -1,0 +1,42 @@
+---
+title: "Examining Racial and Gender Disparities Within the US Prison System"
+author: "Claire Zhang"
+date: 'Autumn 2022'
+output: html_document
+---
+
+```{r echo=FALSE, eval=TRUE, message=FALSE}
+source("../source/analysis.R")
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Abstract 
+[TODO: Include a short abstract (about 50 words)]
+
+
+## Introduction 
+The goal of this report was to use the incarceration trends data provided by the Vera Institute to expose patterns of inequality within the US prison system. The social issues of power and oppression play a huge role in the perpetuation of racial disparities in the criminal legal system. In Data Feminism, power is defined as “the current configuration of structural privilege and structural oppression, in which some groups experience unearned advantages… and other groups experience systematic disadvantages–because those same systems were not designed by them or with people like them in mind,” while oppression defined as “the systematic mistreatment of certain groups of people by other groups [that] happens when power is not distributed equally.” An article from the Vera Institute states that “throughout its history, the US has criminalized low-level behavior, often in racist ways.” This includes nonviolent offenses and conduct involving homelessness, substance abuse, mental health, and poverty. This report answers the questions of which groups of people are most heavily oppressed at the hands of the criminal legal system in the US, as well as how these patterns vary over time and across different states. One direct stakeholder impacted by research into this dataset would be the Vera Institute, while indirect stakeholders include those incarcerated, their families, and the criminal legal system, especially those within it who are responsible for incarcerating people.
+
+## Data Summary 
+```{r}
+source("/Users/clairezhang/Documents/info201/assignments/a4-clairezhaang/source/analysis.R")
+white_1990
+white_1990_jail
+white_2018
+white_2018_jail
+black_1990
+black_1990_jail
+black_2018
+black_2018_jail
+avg_aapi_jail_prop
+avg_black_jail_prop
+avg_latinx_jail_prop
+avg_native_jail_prop
+avg_white_jail_prop
+```
+
+
+[TODO ... other sections ... See Canvas for details]
+
+_All the very best with your work!_
+
