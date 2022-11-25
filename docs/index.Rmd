@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 The US prison system is known to uphold patterns of inequality in many ways, from over-policing marginalized communities to heavily punishing nonviolent offenses often linked to poverty. This analysis and report attempts to expose these patterns of inequality within US incarceration trends through various data visualizations created using data from the Vera Institute.
 
 ## Introduction 
-The goal of this report was to use the incarceration trends data provided by the Vera Institute to expose patterns of inequality within the US prison system. The social issues of power and oppression play a huge role in the perpetuation of racial disparities in the criminal legal system. In Data Feminism, power is defined as “the current configuration of structural privilege and structural oppression, in which some groups experience unearned advantages… and other groups experience systematic disadvantages–because those same systems were not designed by them or with people like them in mind,” while oppression defined as “the systematic mistreatment of certain groups of people by other groups [that] happens when power is not distributed equally.” An article from the Vera Institute states that “throughout its history, the US has criminalized low-level behavior, often in racist ways.” This includes nonviolent offenses and conduct involving homelessness, substance abuse, mental health, and poverty. This report answers the questions of which groups of people are most heavily oppressed at the hands of the criminal legal system in the US, as well as how these patterns vary over time and across different states. One direct stakeholder impacted by research into this dataset would be the Vera Institute, while indirect stakeholders include those incarcerated, their families, and the criminal legal system, especially those within it who are responsible for incarcerating people.
+The goal of this report was to use the incarceration trends data provided by the Vera Institute to expose patterns of inequality within the US prison system. The social issues of power and oppression play a huge role in the perpetuation of racial disparities in the criminal legal system. In Data Feminism, power is defined as “the current configuration of structural privilege and structural oppression, in which some groups experience unearned advantages… and other groups experience systematic disadvantages–because those same systems were not designed by them or with people like them in mind,” while oppression defined as “the systematic mistreatment of certain groups of people by other groups [that] happens when power is not distributed equally.” An article from the Vera Institute states that “throughout its history, the US has criminalized low-level behavior, often in racist ways.” This includes nonviolent offenses and conduct involving homelessness, substance abuse, mental health, and poverty. This report answers the questions of which groups of people are most heavily oppressed at the hands of the criminal legal system in the US, as well as how these patterns vary over time and across different states. One direct stakeholder impacted by research into this dataset would be the Vera Institute, while indirect stakeholders include those incarcerated, their families, and the criminal legal system, especially those within it who are responsible for incarcerating people. As such, the value of indirect stakeholders is particularly important for this project, as we need to keep in mind the possible impact our analysis and conclusions can have on real people and systems.
 
 ## Data Summary 
 ```{r echo=FALSE, include=FALSE}
@@ -30,13 +30,14 @@ avg_latinx_jail_prop
 avg_native_jail_prop
 avg_white_jail_prop
 ```
-After getting the proportion of each race within the total population for all years recorded, I then got the proportion of each race in jail within the total population in jail for all years recorded. This way, I could compare the values and locate any obvious disparities. Values that stood out were the proportion of Black people within the total US population in 2018 (`r black_2018`) compared to the proportion of Black people in jail within the the total population in jail (`r black_2018_jail`). This is hugely disproportionate, especially when taking into account the same values for other races. For White people, those values were `r white_2018` (total White proportion) and `r white_2018_jail` (White jail proportion). I also calculated values for the mean proportion of each race in jail within the total population in jail across all years and states to compare. Those were `r avg_aapi_jail_prop` for AAPI people, `r avg_black_jail_prop` for Black people, `r avg_latinx_jail_prop` for Latinx people, `r avg_native_jail_prop` for Native people, and `r avg_white_jail_prop` for White people. From this, we can see that White people and Black people are jailed at higher rates, but Black people are jailed at a rate that is much less proportionate to their overall population in the US.
+After getting the proportion of each race within the total population for all years recorded, I then got the proportion of each race in jail within the total population in jail for all years recorded. This way, I could compare the values and locate any obvious disparities. Values that stood out were the proportion of Black people within the total US population in 2018 (**`r black_2018`**) compared to the proportion of Black people in jail within the the total population in jail (**`r black_2018_jail`**). This is hugely disproportionate, especially when taking into account the same values for other races. For White people, those values were **`r white_2018`** (total White proportion) and **`r white_2018_jail`** (White jail proportion). I also calculated values for the mean proportion of each race in jail within the total population in jail across all years and states to compare. Those were _`r avg_aapi_jail_prop`_ for AAPI people, _`r avg_black_jail_prop`_ for Black people, _`r avg_latinx_jail_prop`_ for Latinx people, _`r avg_native_jail_prop`_ for Native people, and _`r avg_white_jail_prop`_ for White people. From this, we can see that White people and Black people are jailed at higher rates, but Black people are jailed at a rate that is much less proportionate to their overall population in the US.
 
 ## Growth of the US Prison Population
 ```{r echo=FALSE, message=FALSE}
 source("/Users/clairezhang/Documents/info201/assignments/a4-clairezhaang/source/analysis.R")
 plot_jail_pop_for_us()
 ```
+
 **Caption:**
 This chart shows the growth of the US prison population from 1970 to 2018 by plotting the total number of people in jail for each year.
 
@@ -52,6 +53,7 @@ A few patterns can be observed in the above chart. One is that the total US pris
 source("/Users/clairezhang/Documents/info201/assignments/a4-clairezhaang/source/analysis.R")
 plot_jail_pop_by_state(states)
 ```
+
 **Caption:**
 This chart shows the growth of the prison population from 1970 to 2018 in four states- Washington, New York, California, and Texas. WA is red, NY is green, CA is blue, and TX is purple.
 
@@ -67,6 +69,7 @@ One key pattern that can be seen in the above plot is that the prison population
 source("/Users/clairezhang/Documents/info201/assignments/a4-clairezhaang/source/analysis.R")
 plot_jail_gender_ratio_states(2018)
 ```
+
 **Caption:**
 This chart shows the male and female prison populations in each state in 2018.
 
@@ -86,6 +89,7 @@ aapi_jail_ratio_map
 latinx_jail_ratio_map
 native_jail_ratio_map
 ```
+
 **Caption:**
 These maps display the proportions of the number of people in jail for each race within the total population age 15-64 in each state. 
 
